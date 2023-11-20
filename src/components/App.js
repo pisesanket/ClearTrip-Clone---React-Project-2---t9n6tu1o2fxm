@@ -3,6 +3,8 @@ import Header from "./Header/Header";
 import LeftNavBar from "./LeftNavBar/LeftNavBar";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import FlightSearch from "./Searches/FlightSearch";
+import BusSearch from "./Searches/BusSearch";
+import HotelSearch from './Searches/HotelSearch';
 
 function App() {
   return <div className="App">
@@ -12,8 +14,8 @@ function App() {
       <LeftNavBar />
       <Routes>
         <Route path='/' element={<FlightSearch />}></Route>
-        <Route path='/hotels' element={''}></Route>
-        <Route path= '/bus' element={''}></Route>
+        <Route path='/bus' element={<BusSearch />}></Route>
+        <Route path= '/hotels' element={<HotelSearch />}></Route>
       </Routes>
       </div>
     </Router>

@@ -6,12 +6,12 @@
     color: #1A1A1A;
 }
 
-#flight-search{
+#hotel-search{
     display: flex;
     flex-direction: column;
 
 }
-#flight-search>h1{
+#hotel-search>h1{
     font-size: 32px;
     font-weight: 600;
     line-height: 40px;
@@ -19,7 +19,7 @@
     text-align: left;
     margin-top: 16px;
 }
-#flight-search>h2{
+#hotel-search>h2{
     font-size: 18px;
     font-weight: 500;
     line-height: 30px;
@@ -29,7 +29,7 @@
     margin-top: 10px;
     margin-bottom: 10px;
 }
-#flight-search-box{
+#hotel-search-box{
     display: flex;
     flex-direction: column;
     border: 1px solid rgb(230,230,230);
@@ -39,13 +39,13 @@
     box-shadow:rgba(0, 0, 0, 0.04) 0px 8px 16px;
 }
 
-#flight-one-round{
+#hotel-one-round{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     height: 40px;
 }
-#flight-oneWay{
+#hotel-oneWay{
     display: flex;
     width: 50%;
     justify-content: center ;
@@ -59,10 +59,10 @@
     border-radius: 5px;
 
 }
-#flight-oneWay:hover{
+#hotel-oneWay:hover{
     background-color: rgb(245, 245, 245);
 }
-#flight-Round{
+#hotel-Round{
     display: flex;
     width: 50%;
     justify-content: center ;
@@ -74,13 +74,13 @@
     cursor: pointer;
     border-radius: 5px;
 }
-#flight-Round:hover{
+#hotel-Round:hover{
     background-color: rgb(245,245,245);
 }
 .way-type-active{
     border-bottom: 3px solid #3366cc;
 }
-#flight-search-seat{
+#hotel-search-seat{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -94,7 +94,7 @@
 
 
 }
-#flight-search-seat>div,#flight-search-seat>img{
+#hotel-search-seat>div,#hotel-search-seat>img{
     margin-left: 10px;
     margin-right: 10px;
     font-size: 18px;
@@ -102,27 +102,27 @@
     line-height: 30px;
     font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Ubuntu,Arial,sans-serif;
 }
-#flight-search-seat>img{
+#hotel-search-seat>img{
     cursor: pointer;
 }
-#flight-input{
+#hotel-input{
     display: flex;
     flex-direction: row;
     justify-content: center;
     height: 52px;
     margin-top: 20px;
 }
-#flight-input>div{
+#hotel-input>div{
     display: flex;
     flex-direction: row;
     border: 1px solid rgb(230,230,230);
-    width: 50%;
+    width: 100%;
     align-items: center;
 }
-#flight-input>div>img{
+#hotel-input>div>img{
     margin: 5px;
 }
-#flight-input>div>input{
+#hotel-input>div>input{
     border: none;
     width: 70%;
     margin-left: 10px;
@@ -136,34 +136,30 @@
     };
 
 }
-#flight-input>div>input:focus{
+#hotel-input>div>input:focus{
     border: none;
     outline: none;
 }
 
-#flight-input-first{
-    border-bottom-left-radius: 8px;
-    border-top-left-radius: 8px;
+#hotel-input-first{
+    border-radius: 8px;
 }
-#flight-input-second{
-    border-bottom-right-radius: 8px;
-    border-top-right-radius: 8px;
-}
-#flight-search-bottom{
+
+#hotel-search-bottom{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     height: 52px;
     margin-top: 25px;
 }
-#flight-search-day{
+#hotel-search-day{
     display: flex;
     flex-direction: row;
     align-items: center;
     height: 52px;
 
 }
-#flight-day-label{
+#hotel-day-label{
     display: flex;
     align-items: center;
     height: inherit;
@@ -172,7 +168,7 @@
     line-height: 30px;
     font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Ubuntu,Arial,sans-serif;
 }
-#flight-day-options{
+#hotel-day-options{
     height: inherit;
     border: 1px solid rgb(230,230,230);
     border-radius: 8px;
@@ -184,18 +180,18 @@
     margin-left: 5px;
     cursor: pointer;
 }
-.flight-day-option:hover{
+.hotel-day-option:hover{
     background-color: #d8e2f7;
     cursor: pointer;
 }
-#flight-day-options:focus{
+#hotel-day-options:focus{
     border: 1px solid rgb(230,230,230);
 }
-#flight-day-options:active{
+#hotel-day-options:active{
     border: 1px solid rgb(230,230,230);
 }
 
-#flight-search-btn{
+#hotel-search-btn{
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -217,7 +213,7 @@
 
 
 
-#flight-source-dropdown-root{
+#hotel-source-dropdown-root{
     position: absolute;
     cursor: pointer;
     z-index: 999;
@@ -226,15 +222,17 @@
     border-radius: 12px;
     width: 300px;
     position: absolute;
-    top: 415px;
+    top: 300px;
     max-height: 330px;
     overflow: auto;
     
 }
-#flight-source-dropdown-root::-webkit-scrollbar{
+#hotel-source-dropdown-root::-webkit-scrollbar{
     display: none;
 }
-#flight-dest-dropdown-root{
+
+
+#hotel-dest-dropdown-root{
     position: absolute;
     cursor: pointer;
     z-index: 999;
@@ -243,13 +241,7 @@
     border-radius: 12px;
     width: 300px;
     position: absolute;
-    top: 415px;
-    max-height: 330px;
-    overflow: auto;
-    
-}
-#flight-dest-dropdown-root::-webkit-scrollbar{
-    display: none;
+    top: 300px;
 }
 
 .dropdown-list-item{
