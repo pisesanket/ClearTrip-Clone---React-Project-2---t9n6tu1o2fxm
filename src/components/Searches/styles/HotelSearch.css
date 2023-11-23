@@ -144,6 +144,9 @@
 #hotel-input-first{
     border-radius: 8px;
 }
+#hotel-input-first>input:active #hotel-input-first{
+    border-color: #3366cc !important;
+}
 
 #hotel-search-bottom{
     display: flex;
@@ -205,6 +208,14 @@
     padding-right: 35px;
     color: #ffffff;
     border-radius: 10px;
+}
+#hotel-search-btn:hover{
+    background-color: #ee3801;
+
+}
+#hotel-search-btn>a{
+    text-decoration: none;
+    color: #ffffff;
 }
 
 
@@ -276,3 +287,8 @@
 .dropdown-list-item-city{
     margin-left: 10px;
 }
+.error-border{
+    border-color: red !important;
+    border: 2px solid red !important;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 8px 20px !important;
+  }

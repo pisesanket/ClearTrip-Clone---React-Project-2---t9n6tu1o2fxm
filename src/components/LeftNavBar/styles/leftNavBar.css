@@ -5,10 +5,12 @@
 }
 
 #left-nav-bar{
+    display: block;
     display: flex;
     flex-direction: column;
     /* max-width: 20%; */
     width: 200px;
+    min-width: 150px;
 }
 #nav-bar-item{
     height: 40px;

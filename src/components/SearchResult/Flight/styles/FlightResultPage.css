@@ -1,0 +1,249 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#flight-result-page{
+    display: flex;
+    flex-direction: column;
+
+}
+#left-nav-bar{
+    width: 150px;
+}
+#flight-result-page-filters{
+    display: flex;
+    justify-content: start;
+    border-bottom: 1px solid rgb(230,230,230);
+}
+#bus-filter-bar{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    padding: 20px;
+    font-size: 19px;
+    color: #1a1a1a;
+    font-weight: 500;
+    line-height: 30px;
+    font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Ubuntu,Arial,sans-serif;
+}
+#bus-filter-cheap-div{
+    border: 1px solid rgb(230,230,230);
+    border-radius: 7px;
+    padding: 10px;
+    font-weight: 400;
+    line-height: 25px;
+    font-size: 17px;
+    align-items: center;
+    /* cursor: pointer; */
+    
+}
+#bus-cheap-checkbox{
+    padding: 10px;
+    height: 20px;
+    width: 20px;
+    padding-top: 14px;
+    cursor: pointer;
+    
+}
+#bus-filter-cheap-div>label{
+    /* margin-top: 4px; */
+    margin-left: 10px;
+    cursor: pointer;
+}
+#bus-filter-departure{
+    margin-left: 40px;
+    border: 1px solid rgb(230,230,230);
+    display: flex;
+    align-items: center;
+    border-radius: 7px;
+    cursor: pointer;
+    
+}
+#bus-filter-departure>div{
+    padding: 10px;
+    
+}
+#flight-departure-portal-root{
+    position: absolute;
+    cursor: pointer;
+    z-index: 999;
+    box-shadow: 0 16px 24px 2px rgba(0,0,0,.14);
+    background-color: #fff;
+    border-radius: 12px;
+    width: 300px;
+    position: absolute;
+    top: 160px;
+    left: 400px;
+    max-height: 330px;
+    overflow: auto;
+}
+#bus-departure-drop-down{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 20px;
+}
+#bus-departure-drop-down>div{
+    font-weight: 500;
+    font-size: 17px;
+    /* cursor: pointer; */
+}
+#bus-departure-drop-down>div>label{
+    color: #646464;
+    margin-left: 20px;
+    cursor: pointer;
+}
+#bus-departure-drop-down>div>input{
+    cursor: pointer;
+}
+#flight-result-list{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 900px;
+}
+#flight-list-div{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+}
+#flight-card-div{
+
+    border: 1px solid rgb(230,230,230);
+    border-radius: 8px;
+    margin-top: 20px;
+}
+#flight-card{
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* border: 1px solid black; */
+    min-height: 104px;
+    align-items: center;
+    font-size: 19px;
+    cursor: pointer;
+    color: #1a1a1a;
+    font-weight: 500;
+    line-height: 30px;
+    font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Ubuntu,Arial,sans-serif;
+}
+#flight-card-airline{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 17px;
+    padding: 10px;
+    
+
+}
+#flight-detail-click{
+    font-size: 14px;
+    color: #0f6bff;
+    cursor: pointer;
+}
+#flight-card-time{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#flight-card-time>div{
+    margin: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-weight: 400;
+}
+#flight-card-duration-stop{
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+}
+#flight-card-duration{
+    color: #6d6d6d;
+    border-bottom: 1px solid #6d6d6d;
+}
+#flight-card-stop{
+    color: #6d6d6d;
+}
+#flight-card-price-book{
+    display: flex;
+    flex-direction: row;
+}
+#flight-card-price{
+    display: flex;
+    flex-direction: column;
+}
+#flight-card-price-seats{
+    font-size: 14px;
+    font-weight: 400;
+    color: #11a670;
+}
+#flight-card-book{
+    /* height: 20px; */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    height: 40px;
+    margin-left: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: #ffffff;
+    border-radius: 7px;
+    background-color: #ff4f17;
+    cursor: pointer;
+}
+#flight-card-book:hover{
+    background-color: #e03602;
+}
+#flight-card-detail{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid rgb(230,230,230);
+    border-radius: 9px;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: #1a1a1a;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 30px;
+    font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Ubuntu,Arial,sans-serif;
+}
+#flight-card-source{
+    display: flex;
+    flex-direction: column;
+}
+#flight-card-source-upper{
+    display: flex;
+    font-weight: 400;
+    flex-direction: row;
+}
+#flight-card-dest-upper{
+    display: flex;
+    flex-direction: row;
+    font-weight: 400;
+}
+#flight-card-source-upper>div{
+   margin-left: 10px;
+   margin-right: 10px;
+}
+#flight-card-dest-upper>div{
+    margin-left: 10px;
+    margin-right: 10px;
+    /* font-weight: 400; */
+ }
+ #flight-card-source-lower{
+    font-weight: 400;    
+ }
+ #flight-card-dest-lower{
+    font-weight: 400;
+ }
+.flight-card-detail-time{
+    font-weight: 500;
+}

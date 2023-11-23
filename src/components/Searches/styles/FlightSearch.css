@@ -210,8 +210,15 @@
     color: #ffffff;
     border-radius: 10px;
 }
+#flight-search-btn>a{
+    text-decoration: none;
+    color: #ffffff;
+}
 
+#flight-search-btn:hover{
+    background-color: #ee3801;
 
+}
 
 
 
@@ -246,6 +253,7 @@
     top: 415px;
     max-height: 330px;
     overflow: auto;
+    
     
 }
 #flight-dest-dropdown-root::-webkit-scrollbar{

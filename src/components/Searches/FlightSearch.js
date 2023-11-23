@@ -1,13 +1,14 @@
 import React from "react";
 import FlightSearchBox from "./FlightSearchBox";
-import { FlightSeatProvider } from "../../context/FlightSeatContext";
+import FlightSearchProvider, { FlightErrorProvider, FlightSeatProvider } from "../../context/FlightSeatContext";
 import './styles/FlightSearch.css'
-import FlightSearchDay from "./FlightSearchDay";
-import FlightSearchBtn from "./FlightSearchBtn";
+
 
 const FlightSearch = () =>{
 
     return (<>
+        <FlightSearchProvider>
+        <FlightErrorProvider>
         <FlightSeatProvider>
             <div id="flight-search">
                 <h1>Search flights</h1>
@@ -18,6 +19,8 @@ const FlightSearch = () =>{
 
             </div>
         </FlightSeatProvider>
+        </FlightErrorProvider>
+        </FlightSearchProvider>
     </>)
 }
 

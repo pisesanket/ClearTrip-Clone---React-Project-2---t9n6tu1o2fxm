@@ -22,7 +22,9 @@ import takeoff from './Images/takeoff.png';
 import location from './Images/location.png';
 import plus from './Images/plus.png';
 import minus from './Images/minus.png';
+import next from './Images/next.png'
+import prev from './Images/back.png'
 
-const images = {'landing':landing,'takeoff':takeoff,'location':location,'plus':plus,'minus':minus,'bus':bus,'busBlue':busBlue,'bed':bed,'home':home,'homeBlue':homeBlue,'homeGrey':homeGrey,'homeOrange':homeOrange,'hotel':hotel,'hotelBlue':hotelBlue,'luggage':luggage,'luggaeBlue':luggageBlue,'luggageGrey':luggageGrey,'luggageOrange':luggageOrange,'plane':plane,'planeBlue':planeBlue,'user':user,'userBlue':userBlue,'userOrange':userOrange,'userGrey':userGrey}
+const images = {'next':next,'prev':prev,'landing':landing,'takeoff':takeoff,'location':location,'plus':plus,'minus':minus,'bus':bus,'busBlue':busBlue,'bed':bed,'home':home,'homeBlue':homeBlue,'homeGrey':homeGrey,'homeOrange':homeOrange,'hotel':hotel,'hotelBlue':hotelBlue,'luggage':luggage,'luggaeBlue':luggageBlue,'luggageGrey':luggageGrey,'luggageOrange':luggageOrange,'plane':plane,'planeBlue':planeBlue,'user':user,'userBlue':userBlue,'userOrange':userOrange,'userGrey':userGrey}
 
 export default images;

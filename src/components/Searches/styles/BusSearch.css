@@ -207,12 +207,18 @@
     background-color: #f77728;
     padding-left: 35px;
     padding-right: 35px;
-    color: #ffffff;
     border-radius: 10px;
 }
+#bus-search-btn:hover{
+    background-color: #ee3801;
 
+}
 
+#bus-search-btn>a{
+    color: #ffffff;
+    text-decoration: none;
 
+}
 
 
 
@@ -284,3 +290,8 @@
 .dropdown-list-item-city{
     margin-left: 10px;
 }
+.error-border{
+    border-color: red !important;
+    border: 2px solid red !important;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 8px 20px !important;
+  }
