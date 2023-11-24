@@ -8,23 +8,28 @@ import HotelSearch from './Searches/HotelSearch';
 import HotelResultPage from "./SearchResult/Hotels/HotelResultPage";
 import BusResultPage from "./SearchResult/Bus/BusResultPage";
 import FlightResultPage from "./SearchResult/Flight/FlightResultPage";
+import { AuthProvider } from "../context/AuthContext";
+import MobileTopNavbar from "./MobileTopNavbar/MobileTopNavbar";
 
 function App() {
-  return <div className="App">
-    <Router>
-    <Header />
-      <div id="main-page">
-      <LeftNavBar />
-      <Routes>
-        <Route path='/' element={<FlightSearch />}></Route>
-        <Route path='/bus' element={<BusSearch />}></Route>
-        <Route path= '/hotels' element={<HotelSearch />}></Route>
-        <Route path="/hotels/search" element={<HotelResultPage />} ></Route>
-        <Route path="/bus/search" element={<BusResultPage />} ></Route>
-        <Route path="/flight/search" element={<FlightResultPage />} ></Route>
-      </Routes>
-      </div>
-    </Router>
+  return <div className="App ">
+    <AuthProvider>
+      <Router>
+      <Header />
+        <MobileTopNavbar />
+        <div id="main-page" >
+        <LeftNavBar />
+        <Routes>
+          <Route path='/' element={<FlightSearch />}></Route>
+          <Route path='/bus' element={<BusSearch />}></Route>
+          <Route path= '/hotels' element={<HotelSearch />}></Route>
+          <Route path="/hotels/search" element={<HotelResultPage />} ></Route>
+          <Route path="/bus/search" element={<BusResultPage />} ></Route>
+          <Route path="/flight/search" element={<FlightResultPage />} ></Route>
+        </Routes>
+        </div>
+      </Router>
+    </AuthProvider>
   </div>;
 }
 

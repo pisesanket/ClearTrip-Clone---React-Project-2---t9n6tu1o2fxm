@@ -1,0 +1,130 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#root{
+    position: relative;
+}
+#login-modal-root{
+    /* position: fixed; */
+}
+#login-modal-div{
+    
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 10000;
+    width: 100vw;
+    height:100vh;
+    left: 0;
+    top: 0;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#login-modal{
+    background-color: #ffffff;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 28px;
+    font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Ubuntu,Arial,sans-serif;
+}
+#login-modal-close{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+#login-modal-close>img{
+    cursor: pointer;
+}
+#login-modal-email{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    width:100%;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 28px;
+    font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Ubuntu,Arial,sans-serif;
+}
+#login-modal-password{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
+    font-weight: 500;
+    line-height: 28px;
+    font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Ubuntu,Arial,sans-serif;
+}
+
+#login-modal-email>input,#login-modal-password>input{
+
+    /* padding-bottom: 8px; */
+    color: #282829;
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+    /* font-size: calc(15px * var(--dynamic-font-scale, 1))!important; */
+    font-weight:500;
+    min-height: 45px;
+    padding-left: 8px;
+    padding-right: 8px;
+    width: inherit;
+    /* color: #dee0e1; */
+    border-color: #dee0e1;
+    border-radius:3px;
+    &:active, &:focus{ 
+
+        
+        border: 2px solid #2e69ff;
+        outline: none; 
+        background-color: #ffffff;
+        color: rgb(40, 40, 41);
+        text-decoration: none;
+        box-shadow: rgb(235, 240, 255) 0px 0px 0px 2px;
+      }
+  
+      &:disabled {
+        
+        border-radius: 3px;
+        background-color: #F9FAFB;
+      }
+}
+#login-modal-btn{
+    height: 40px;
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+    padding-top: 5px;
+}
+.login-signup-btn{
+    color: #ffffff;
+    border-radius: 7px;
+    background-color: #282829;
+    cursor: pointer;
+}
+.login-signup-btn:hover{
+    background-color: #000000;
+}
+#login-modal-signup-div{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+#login-modal-signup-btn{
+    text-align: center;
+    padding: 4px;
+}
+.error{
+    color: red;
+}
+.root-login-freeze{
+    position: fixed;
+}

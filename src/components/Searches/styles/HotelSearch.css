@@ -12,7 +12,7 @@
 
 }
 #hotel-search>h1{
-    font-size: 32px;
+    font-size: calc(32px * var(--dynamic-font-scale,1));
     font-weight: 600;
     line-height: 40px;
     font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Ubuntu,Arial,sans-serif;
@@ -20,7 +20,7 @@
     margin-top: 16px;
 }
 #hotel-search>h2{
-    font-size: 18px;
+    font-size: calc(18px * var(--dynamic-font-scale,1));
     font-weight: 500;
     line-height: 30px;
     font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Ubuntu,Arial,sans-serif;
@@ -51,7 +51,7 @@
     justify-content: center ;
 
     align-items: center;
-    font-size: 18px;
+    font-size: calc(18px * var(--dynamic-font-scale,1));
     font-weight: 500;
     line-height: 30px;
     font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Ubuntu,Arial,sans-serif;
@@ -67,7 +67,7 @@
     width: 50%;
     justify-content: center ;
     align-items: center;
-    font-size: 18px;
+    font-size: calc(18px * var(--dynamic-font-scale,1));
     font-weight: 500;
     line-height: 30px;
     font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Ubuntu,Arial,sans-serif;
@@ -97,7 +97,7 @@
 #hotel-search-seat>div,#hotel-search-seat>img{
     margin-left: 10px;
     margin-right: 10px;
-    font-size: 18px;
+    font-size: calc(18px * var(--dynamic-font-scale,1));
     font-weight: 500;
     line-height: 30px;
     font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Ubuntu,Arial,sans-serif;
@@ -127,7 +127,7 @@
     width: 70%;
     margin-left: 10px;
     height: inherit;
-    font-size: 18px;
+    font-size: calc(18px * var(--dynamic-font-scale,1));
     font-weight: 500;
     line-height: 30px;
     font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Ubuntu,Arial,sans-serif;
@@ -166,7 +166,7 @@
     display: flex;
     align-items: center;
     height: inherit;
-    font-size: 18px;
+    font-size: calc(18px * var(--dynamic-font-scale,1));
     font-weight: 500;
     line-height: 30px;
     font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Ubuntu,Arial,sans-serif;
@@ -175,7 +175,7 @@
     height: inherit;
     border: 1px solid rgb(230,230,230);
     border-radius: 8px;
-    font-size: 18px;
+    font-size: calc(18px * var(--dynamic-font-scale,1));
     font-weight: 500;
     line-height: 30px;
     font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Ubuntu,Arial,sans-serif;
@@ -199,7 +199,7 @@
     display: flex;
     align-items: center;
     height: inherit;
-    font-size: 19px;
+    font-size: calc(19px * var(--dynamic-font-scale,1));
     font-weight: 600;
     line-height: 30px;
     font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Ubuntu,Arial,sans-serif;
@@ -263,7 +263,7 @@
    padding-left: 10px;
    margin: 4px;
    border-radius: 5px;
-   font-size: 17px;
+   font-size: calc(17px * var(--dynamic-font-scale,1));
     font-weight: 500;
     line-height: 28px;
     font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Ubuntu,Arial,sans-serif;
@@ -280,7 +280,7 @@
     align-items: center;
     line-height: 20px;
     font-weight: 500;
-    font-size: 15px;
+    font-size: calc(15px * var(--dynamic-font-scale,1));
     background-color: rgb(245, 245, 245) ;
     color: #3c3c3d;
 }
@@ -292,3 +292,31 @@
     border: 2px solid red !important;
     box-shadow: rgba(0, 0, 0, 0.04) 0px 8px 20px !important;
   }
+
+  @media only screen and (max-width:1024px) {
+   
+    #hotel-search{
+        width: 100vw;
+    }
+    #hotel-search-box{
+        width: 100vw;
+    }
+    #hotel-source-dropdown-root{
+        top: 320px;
+    }
+    /* #hotel-dest-dropdown-root{
+        top: 413px;
+        left: 50px;
+    } */
+    #hotel-search-box{
+        padding: 10px;
+    }
+    #hotel-search>h1,#flight-search>h2{
+        padding-left: 10px;
+    }
+    #hotel-day-options{
+        font-size:calc(14px * var(--dynamic-font-scale,1)); 
+        line-height: 20px;
+        padding: 2px;
+    }
+}

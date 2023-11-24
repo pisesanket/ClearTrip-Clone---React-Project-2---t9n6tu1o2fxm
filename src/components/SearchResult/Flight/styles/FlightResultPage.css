@@ -10,6 +10,7 @@
 }
 #left-nav-bar{
     width: 150px;
+    
 }
 #flight-result-page-filters{
     display: flex;
@@ -21,7 +22,7 @@
     flex-direction: row;
     text-align: center;
     padding: 20px;
-    font-size: 19px;
+    font-size: calc(19px * var(--dynamic-font-scale,1));
     color: #1a1a1a;
     font-weight: 500;
     line-height: 30px;
@@ -33,7 +34,7 @@
     padding: 10px;
     font-weight: 400;
     line-height: 25px;
-    font-size: 17px;
+    font-size: calc(17px * var(--dynamic-font-scale,1));
     align-items: center;
     /* cursor: pointer; */
     
@@ -102,6 +103,7 @@
     flex-direction: column;
     flex-wrap: wrap;
     width: 900px;
+    
 }
 #flight-list-div{
     display: flex;
@@ -110,10 +112,12 @@
     
 }
 #flight-card-div{
-
+    /* max-width:  900px; */
+    
     border: 1px solid rgb(230,230,230);
     border-radius: 8px;
     margin-top: 20px;
+    
 }
 #flight-card{
     padding: 20px;
@@ -123,7 +127,7 @@
     /* border: 1px solid black; */
     min-height: 104px;
     align-items: center;
-    font-size: 19px;
+    font-size: calc(19px * var(--dynamic-font-scale,1));
     cursor: pointer;
     color: #1a1a1a;
     font-weight: 500;
@@ -134,13 +138,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 17px;
+    font-size: calc(17px * var(--dynamic-font-scale,1));
     padding: 10px;
     
 
 }
 #flight-detail-click{
-    font-size: 14px;
+    font-size: calc(14px * var(--dynamic-font-scale,1));
     color: #0f6bff;
     cursor: pointer;
 }
@@ -158,7 +162,7 @@
 #flight-card-duration-stop{
     display: flex;
     flex-direction: column;
-    font-size: 14px;
+    font-size: calc(14px * var(--dynamic-font-scale,1));
 }
 #flight-card-duration{
     color: #6d6d6d;
@@ -170,13 +174,14 @@
 #flight-card-price-book{
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 #flight-card-price{
     display: flex;
     flex-direction: column;
 }
 #flight-card-price-seats{
-    font-size: 14px;
+    font-size: calc(14px * var(--dynamic-font-scale,1));
     font-weight: 400;
     color: #11a670;
 }
@@ -210,7 +215,7 @@
     margin-left: 20px;
     margin-right: 20px;
     color: #1a1a1a;
-    font-size: 18px;
+    font-size: calc(18px * var(--dynamic-font-scale,1));
     font-weight: 500;
     line-height: 30px;
     font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Ubuntu,Arial,sans-serif;
@@ -246,4 +251,28 @@
  }
 .flight-card-detail-time{
     font-weight: 500;
+}
+
+@media only screen and (max-width:1024px) {
+    #flight-result-list{
+        width: 100vw;
+    }
+    #flight-card{
+        padding: 10px;
+        font-size: calc(13px * var(--dynamic-font-scale,1));
+
+    }
+    #flight-card-book{
+        padding-left: 10px;
+        padding-right: 10px;
+        height: 25px;
+
+    }
+    #flight-card-airline{
+        padding: 0;
+    }
+    #flight-departure-portal-root{
+        left: 90px;
+        top: 200px;
+    }
 }
