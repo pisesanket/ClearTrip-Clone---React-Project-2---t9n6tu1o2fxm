@@ -176,6 +176,10 @@
     flex-direction: row;
     align-items: center;
 }
+#flight-card-price-book>a{
+    text-decoration: none;
+    color: #ffffff;
+}
 #flight-card-price{
     display: flex;
     flex-direction: column;

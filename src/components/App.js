@@ -10,6 +10,10 @@ import BusResultPage from "./SearchResult/Bus/BusResultPage";
 import FlightResultPage from "./SearchResult/Flight/FlightResultPage";
 import { AuthProvider } from "../context/AuthContext";
 import MobileTopNavbar from "./MobileTopNavbar/MobileTopNavbar";
+import HotelDetail from "./Details/Hotel/HotelDetail";
+import BusItinerary from "./Itinerary/Bus/BusItinerary";
+import FlightItinerary from "./Itinerary/flight/FlightItinerary";
+import HotelItinerary from "./Itinerary/Hotel/HotelItinerary";
 
 function App() {
   return <div className="App ">
@@ -26,6 +30,11 @@ function App() {
           <Route path="/hotels/search" element={<HotelResultPage />} ></Route>
           <Route path="/bus/search" element={<BusResultPage />} ></Route>
           <Route path="/flight/search" element={<FlightResultPage />} ></Route>
+          <Route path="/hotel/details/:hotelId" element={<HotelDetail />}></Route>
+          <Route path="/bus/detail/itinerary/:busId" element={<BusItinerary />}></Route>
+          <Route path="/flight/detail/itinerary/:flightId" element={<FlightItinerary />}></Route>
+          <Route path="/hotel/detail/itinerary/:hotelId" element={<HotelItinerary />}></Route>
+
         </Routes>
         </div>
       </Router>

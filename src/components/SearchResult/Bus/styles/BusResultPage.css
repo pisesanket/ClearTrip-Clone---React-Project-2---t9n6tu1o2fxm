@@ -144,6 +144,10 @@
     flex-direction: row;
     margin-left: 20px;
 }
+#bus-card-price-book>a{
+    text-decoration: none;
+    color: #ffffff;
+}
 #bus-card-book{
     margin-left: 10px;
     background-color: #ff4f17;

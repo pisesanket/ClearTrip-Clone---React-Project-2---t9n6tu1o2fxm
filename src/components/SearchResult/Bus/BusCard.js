@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import BusCardAmenities from "./BusCardAmenities";
+import { Link } from "react-router-dom";
 
 
 
@@ -22,7 +23,7 @@ const BusCard = (props) =>{
                 </div>
                 <div id="bus-card-price-book">
                     <div id="bus-card-price">₹{props.busData.fare} </div>
-                    <div id="bus-card-book">Book Now</div>
+                    <Link to={`/bus/detail/itinerary/${props.busData._id}`}><div id="bus-card-book">Book Now</div></Link>
                 </div>
             </div>
             <div id="bus-card-bottoms">

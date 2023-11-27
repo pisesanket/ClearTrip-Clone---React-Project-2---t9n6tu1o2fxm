@@ -30,12 +30,12 @@ const HotelCard = (props) =>{
             <div id="hotel-card">
                 <div id="hotel-card-images" className="image-container">
                     <div id="hotel-card-images-prev" className="image prev" ><img onClick={handlePrevClick} src={images.prev} width={'25px'} alt="" /></div>
-                    <Link to='/'><div id='hotel-card-images-middle' className="middle"><img  src={imageList[count]} alt="" /></div></Link>
+                    <Link to={`/hotel/details/${props.hotelData._id}`}><div id='hotel-card-images-middle' className="middle"><img  src={imageList[count]} alt="" /></div></Link>
                     <div id="hotel-card-images-next" className="image next"><img onClick={handleNextClick} src={images.next} width={'25px'} alt="" /></div>
                 </div>
 
                 <div id="hotel-card-content">
-                    <Link to='/'>
+                    <Link to={`/hotel/details/${props.hotelData._id}`}>
                         <div id="hotel-card-name-rating">
                             <div id="hotel-card-name-rating-name">{props.name}</div>
                             <div>{props.rating}/5</div>

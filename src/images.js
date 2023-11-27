@@ -26,7 +26,10 @@ import next from './Images/next.png';
 import prev from './Images/back.png';
 import close from './Images/close.png';
 import userWhite from './Images/userWhite.png';
-import exit from './Images/exit.png'
-const images = {'logout':exit,'userWhite':userWhite,'close':close,'next':next,'prev':prev,'landing':landing,'takeoff':takeoff,'location':location,'plus':plus,'minus':minus,'bus':bus,'busBlue':busBlue,'bed':bed,'home':home,'homeBlue':homeBlue,'homeGrey':homeGrey,'homeOrange':homeOrange,'hotel':hotel,'hotelBlue':hotelBlue,'luggage':luggage,'luggaeBlue':luggageBlue,'luggageGrey':luggageGrey,'luggageOrange':luggageOrange,'plane':plane,'planeBlue':planeBlue,'user':user,'userBlue':userBlue,'userOrange':userOrange,'userGrey':userGrey}
+import exit from './Images/exit.png';
+import checkMark from './Images/checkMark.png';
+import cross from './Images/cross.png'
+import ratingStar from './Images/ratingStar.png'
+const images = {'ratingStar':ratingStar,'cross':cross,'checkMark':checkMark,'logout':exit,'userWhite':userWhite,'close':close,'next':next,'prev':prev,'landing':landing,'takeoff':takeoff,'location':location,'plus':plus,'minus':minus,'bus':bus,'busBlue':busBlue,'bed':bed,'home':home,'homeBlue':homeBlue,'homeGrey':homeGrey,'homeOrange':homeOrange,'hotel':hotel,'hotelBlue':hotelBlue,'luggage':luggage,'luggaeBlue':luggageBlue,'luggageGrey':luggageGrey,'luggageOrange':luggageOrange,'plane':plane,'planeBlue':planeBlue,'user':user,'userBlue':userBlue,'userOrange':userOrange,'userGrey':userGrey}
 
 export default images;
