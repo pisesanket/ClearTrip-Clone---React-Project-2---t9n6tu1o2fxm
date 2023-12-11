@@ -1,14 +1,20 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import BusCardAmenities from "./BusCardAmenities";
-import { Link } from "react-router-dom";
+import { Link, unstable_HistoryRouter, useNavigate } from "react-router-dom";
+import { useBookingContext } from "../../../context/BookingDetailContext";
 
 
 
 const BusCard = (props) =>{
     const [isAmenities,setAmenities] = useState(false);
-
+    const {bookingValues,setType,setId,setStartDate,setEndDate,setPrice} = useBookingContext();
+    const navigate = useNavigate();
     function handleAmenClick(){
         setAmenities(!isAmenities);
+    }
+    function handleBookNowClick(){
+        setPrice(props.busData.fare);
+        navigate(`/bus/detail/itinerary/${props.busData._id}`);
     }
     
     return (<>
@@ -23,7 +29,7 @@ const BusCard = (props) =>{
                 </div>
                 <div id="bus-card-price-book">
                     <div id="bus-card-price">₹{props.busData.fare} </div>
-                    <Link to={`/bus/detail/itinerary/${props.busData._id}`}><div id="bus-card-book">Book Now</div></Link>
+                <div id="bus-card-book" onClick={handleBookNowClick}>Book Now</div>
                 </div>
             </div>
             <div id="bus-card-bottoms">

@@ -4,6 +4,7 @@ import images from "../../images";
 import FlightInput from "./FlightInput";
 import FlightSearchBtn from "./FlightSearchBtn";
 import FlightSearchDay from "./FlightSearchDay";
+import FlightSearchDate from "./FlightSearchDate";
 
 
 const FlightSearchBox = () =>{
@@ -22,10 +23,10 @@ const FlightSearchBox = () =>{
     return (<>
         
         <div id="flight-search-box">
-            <div id="flight-one-round">
+            {/* <div id="flight-one-round">
                 <div id="flight-oneWay" className={wayType==1?'way-type-active':''} onClick={handleWayClick}>One Way</div>
                 <div id="flight-Round" className={wayType==2?'way-type-active':''}  onClick={handleWayClick}>Round</div>
-            </div>
+            </div> */}
             <div id="flight-search-seat">
                 <img onClick={decrementSeatCount} width={'24px'} height={'24px'} src={images.minus} alt="" />
                 <div>{seatCount} {seatCount==1?'Seat':'Seats'}</div>
@@ -36,7 +37,8 @@ const FlightSearchBox = () =>{
                 
 
                 <div id="flight-search-bottom">
-                    <FlightSearchDay />
+                    <FlightSearchDate />
+                    {/* <FlightSearchDay /> */}
                     <FlightSearchBtn />
                 </div>
         

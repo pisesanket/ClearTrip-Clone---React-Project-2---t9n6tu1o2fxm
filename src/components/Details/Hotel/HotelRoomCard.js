@@ -1,9 +1,15 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useBookingContext } from "../../../context/BookingDetailContext";
 
 
 const HotelRoomCard = ({hotelId,hotelRoomData}) =>{
-
+    const {bookingValues,setType,setId,setStartDate,setEndDate,setPrice} = useBookingContext();
+    const navigate = useNavigate();
+    function handleBookClick(){
+        setPrice(hotelRoomData?.costDetails?.baseCost+hotelRoomData?.costDetails?.taxesAndFees);
+        navigate(`/hotel/detail/itinerary/${hotelId}`);
+    }
 
     return (<>
         <div id="hotel-room-card" className="hotel-room-card">
@@ -14,7 +20,7 @@ const HotelRoomCard = ({hotelId,hotelRoomData}) =>{
                 <div id="room-cancelation">{hotelRoomData?.cancellationPolicy}</div>
             </div>
             <div id="hotel-room-price">₹{hotelRoomData?.costDetails?.baseCost} <span>+ ₹{hotelRoomData?.costDetails?.taxesAndFees} tax/night</span></div>
-            <Link to={`/hotel/detail/itinerary/${hotelId}`}><div id="hotel-room-book-btn">Book</div></Link>
+            <div id="hotel-room-book-btn" onClick={handleBookClick}>Book</div>
         </div>
     </>)
 }

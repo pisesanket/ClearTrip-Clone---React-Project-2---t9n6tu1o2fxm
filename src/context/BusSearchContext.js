@@ -61,8 +61,9 @@ const BusSearchProvider = ({children})=>{
         const newSearch = {...searchBus,'dest':loc};
         setSearchBus(newSearch)
     }
-    function setDay(day){
-        const newSearch = {...searchBus,'day':day};
+    function setInDay(dayIn){
+        const shortDayName = new Date(dayIn).toLocaleDateString('en-US', { weekday: 'short' });
+        let newSearch = {...searchBus,'dayIn':dayIn,'day':shortDayName};
         setSearchBus(newSearch);
     }
 
@@ -70,7 +71,7 @@ const BusSearchProvider = ({children})=>{
         searchBus,
         setDest,
         setSource,
-        setDay
+        setInDay
     }
 
     return (

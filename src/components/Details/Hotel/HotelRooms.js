@@ -10,7 +10,7 @@ const HotelRooms = ({hotelId,hotelRooms}) =>{
             <div id="hotel-room-list" className="hotel-room-list">
                 {
                     hotelRooms.map(entry=>{
-                        return (<HotelRoomCard hotelId={hotelId} hotelRoomData = {entry} />)
+                        return (<HotelRoomCard key={entry.roomNumber} hotelId={hotelId} hotelRoomData = {entry} />)
                     })
                 }
             </div>

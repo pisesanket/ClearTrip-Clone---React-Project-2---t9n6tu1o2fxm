@@ -64,16 +64,17 @@ const FlightSearchProvider = ({children})=>{
         const newSearch = {...searchFlight,'dest':loc};
         setSearchFlight(newSearch)
     }
-    function setDay(day){
-        const newSearch = {...searchFlight,'day':day};
-        setSearchFlight(newSearch);
-    }
+    function setInDay(dayIn){
+      const shortDayName = new Date(dayIn).toLocaleDateString('en-US', { weekday: 'short' });
+      let newSearch = {...searchFlight,'dayIn':dayIn,'day':shortDayName};
+      setSearchFlight(newSearch);
+  }
 
     const contextValue = {
         searchFlight,
         setDest,
         setSource,
-        setDay
+        setInDay
     }
 
     return (

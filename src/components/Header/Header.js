@@ -8,10 +8,11 @@ import LoginModal from "../Login-SignUp/LoginModal";
 import SignupModal from "../Login-SignUp/SignupModal";
 import images from "../../images";
 import UserModal from "../../Portals/UserModal";
+import { useLoginModalContext } from "../../context/LoginModalContext";
 
 const Header = () =>{
     const {isLoggedIn,setIsLoggedIn} = useAuthContext();
-    const [isLoginModal,setLoginModal] = useState(false);
+    const {isLoginModal,setLoginModal} = useLoginModalContext();
     const [isSignupModal,setSignupModal] = useState(false);
     const [isUserModal,setUserModal] = useState(false);
     function handleLoginClick(){

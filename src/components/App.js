@@ -14,10 +14,17 @@ import HotelDetail from "./Details/Hotel/HotelDetail";
 import BusItinerary from "./Itinerary/Bus/BusItinerary";
 import FlightItinerary from "./Itinerary/flight/FlightItinerary";
 import HotelItinerary from "./Itinerary/Hotel/HotelItinerary";
+import Payment from "./Payment/Payment";
+import { LoginModalContextProvider } from "../context/LoginModalContext";
+import BookingCalendar from "./BookingCalender";
+import { BookingContextProvider } from "../context/BookingDetailContext";
+import Trips from "./Trips/Trips";
 
 function App() {
   return <div className="App ">
     <AuthProvider>
+    <LoginModalContextProvider>
+    <BookingContextProvider>
       <Router>
       <Header />
         <MobileTopNavbar />
@@ -34,10 +41,15 @@ function App() {
           <Route path="/bus/detail/itinerary/:busId" element={<BusItinerary />}></Route>
           <Route path="/flight/detail/itinerary/:flightId" element={<FlightItinerary />}></Route>
           <Route path="/hotel/detail/itinerary/:hotelId" element={<HotelItinerary />}></Route>
+          <Route path="/payment" element={<Payment />}></Route>
+          <Route path='/date' element={<BookingCalendar />}></Route>
+          <Route path="/trips" element={<Trips />}></Route>
 
         </Routes>
         </div>
       </Router>
+    </BookingContextProvider>
+    </LoginModalContextProvider>
     </AuthProvider>
   </div>;
 }

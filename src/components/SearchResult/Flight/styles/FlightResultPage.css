@@ -29,6 +29,7 @@
     font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Ubuntu,Arial,sans-serif;
 }
 #bus-filter-cheap-div{
+    display: flex;
     border: 1px solid rgb(230,230,230);
     border-radius: 7px;
     padding: 10px;
@@ -80,6 +81,7 @@
     overflow: auto;
 }
 #bus-departure-drop-down{
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;

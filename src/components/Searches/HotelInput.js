@@ -27,7 +27,7 @@ const HotelInput = () =>{
       };
     
       const handleSelectStation = (stat) => {
-        setSource(`${stat.iata} ${stat.city}`);
+        setSource(`${stat.city}`);
         setLocationClassName(null);
         setLocation(stat.city);
         setTimeout(()=>{

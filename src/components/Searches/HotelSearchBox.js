@@ -4,6 +4,7 @@ import HotelSearchBtn from "./HotelSearchBtn";
 import HotelSearchDay from "./HotelSearchDay";
 import HotelInput from "./HotelInput";
 import { useHotelErrorContext } from "../../context/HotelSearchContext";
+import HotelSearchDate from "./HotelSearchDate";
 
 
 
@@ -17,7 +18,8 @@ const HotelSearchBox = () =>{
                 
 
                 <div id="hotel-search-bottom">
-                    <HotelSearchDay />
+                    <HotelSearchDate />
+                    {/* <HotelSearchDay /> */}
                     <HotelSearchBtn />
                 </div>
                 <div id="hotel-search-error" style={{color:'red'}}>

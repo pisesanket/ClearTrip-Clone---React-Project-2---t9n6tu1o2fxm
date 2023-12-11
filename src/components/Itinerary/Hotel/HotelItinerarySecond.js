@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useHotelDetailContext, useHotelItContext } from "../../../context/HotelItineraryContext";
+import images from "../../../images";
 
 
 
@@ -38,6 +39,7 @@ const HotelItinerarySecond = () =>{
              <input type="text" value={itMob} placeholder="Enter Mobile Number" className={error.input=='mob'?'error-input':null} onChange={(e)=>setItMob(e.target.value)}/>
              <div>Email address</div>
              <input type="email" value={itEmail} placeholder="Enter Email Address" className={error.input=='email'?'error-input':null}  onChange={(e)=>setItEmail(e.target.value)} />
+             <div>{error.input=='mob'?<div style={{color:'red',fontSize:'15px'}}><img src={images.warning} width={'15px'} alt="" /> Enter mobile</div>:error.input=='email'?<div style={{color:'red',fontSize:'15px'}}><img src={images.warning} width={'15px'} alt="" /> Enter email</div>:null}</div>
              <div className="itinerary-btn-div">
                <div className="itinerary-btn" onClick={handlPrevClick}>Prev</div>
                <div className="itinerary-btn" onClick={handleNextClick}>Next</div>

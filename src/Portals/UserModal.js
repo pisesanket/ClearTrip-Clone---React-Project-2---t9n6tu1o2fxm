@@ -37,7 +37,7 @@ const UserModal =(props) =>{
     return (<>
         <div id="user-modal" ref={profileRef}>
             <div id="user-modal-div">
-                <Link to='/' onClick={handleTripClick}><div className="user-modal-item"><img src={images.luggage} height={'24px'} width={'24px'} alt="" /><div>My trips</div></div></Link>
+                <Link to='/trips' onClick={handleTripClick}><div className="user-modal-item"><img src={images.luggage} height={'24px'} width={'24px'} alt="" /><div>My trips</div></div></Link>
                 <div className="user-modal-item" onClick={handleLogoutClick}><img src={images.logout} height={'24px'} width={'24px'} alt="" /><div>Logout</div></div>
             </div>
         </div>

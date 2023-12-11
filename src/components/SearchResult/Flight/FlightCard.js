@@ -1,15 +1,22 @@
 import React, { useState } from "react";
 import FlightCardDetails from "./FlightCardDetails";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useBookingContext } from "../../../context/BookingDetailContext";
 // import BusCardAmenities from "./BusCardAmenities";
 
 
 
 const FlightCard = (props) =>{
     const [isDetail,setDetail] = useState(false);
+    const {bookingValues,setType,setId,setStartDate,setEndDate,setPrice} = useBookingContext();
 
+    const navigate = useNavigate();
     function handleDetailClick(){
         setDetail(!isDetail);
+    }
+    function handleBookClick(){
+        setPrice(props.flightData.ticketPrice);
+        navigate(`/flight/detail/itinerary/${props.flightData._id}`)
     }
     
     return (<>
@@ -34,11 +41,11 @@ const FlightCard = (props) =>{
                     <div id="flight-card-price-base">₹{props.flightData.ticketPrice}</div>
                     <div id="flight-card-price-seats">{props.flightData.availableSeats} seats left</div>
                 </div>
-                <Link to={`/flight/detail/itinerary/${props.flightData._id}`}>
-                    <div id="flight-card-book">
+                
+                    <div id="flight-card-book" onClick={handleBookClick}>
                         Book
                     </div>
-                </Link>
+                
             </div>
            
         </div>

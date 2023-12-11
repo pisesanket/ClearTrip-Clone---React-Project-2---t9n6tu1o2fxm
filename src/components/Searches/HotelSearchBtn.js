@@ -5,18 +5,27 @@ import { useHotelContext, useHotelErrorContext } from "../../context/HotelSearch
 
 const HotelSearchBtn = () =>{
     const { searchHotel,setLocation,setDay} = useHotelContext();
-    const  {locationClass,dayClassName,setLocationClassName,setDayClassName} = useHotelErrorContext();
+    const  { locationClass,dayClassName,dayOutClassName,setLocationClassName,setDayInClassName,setDayCheckOutClassName} = useHotelErrorContext();
     function handleSearchClick(){
+        
         if(!searchHotel.location){
             setLocationClassName('error-border');
-        }else if(!searchHotel.day){
-            setDayClassName('error-border');
+        }else if(!searchHotel.dayIn){
+            setDayInClassName('error-border');
+        }else if(!searchHotel.dayOut){
+            setDayCheckOutClassName('error-border');
+        }else{
+            setDayCheckOutClassName(null);    
+            setLocationClassName(null);
+            setDayInClassName(null)
         }
     }
     
+    
     return (<>
         <div id="hotel-search-btn">
-        {searchHotel.location && searchHotel.day ? (
+            {/* {console.log(searchHotel)} */}
+        {searchHotel.location && searchHotel.dayOut && searchHotel.dayIn &&searchHotel.day ? (
           <Link to={`/hotels/search?location=${searchHotel.location}&day=${searchHotel.day}`} >
             Search Hotels
           </Link>

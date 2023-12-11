@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from "react"
+import React, { createContext, useContext, useEffect, useState } from "react"
 
 
 const HotelSearchContext = createContext();
@@ -28,17 +28,23 @@ const HotelFilterProvider = ({children})=>{
 const HotelErrorProvider = ({children}) =>{
     const [locationClass,setLocationClass] = useState(null);
     const [dayClassName,setDayClass] = useState(null);
+    const [dayOutClassName,setDayOutClassName] = useState(null);
     function setLocationClassName(name){
             setLocationClass(name);
     }
-    function setDayClassName(name){
-        setDayClass(name);
+    function setDayCheckOutClassName(name){
+        setDayOutClassName(name);
+    }
+    function setDayInClassName(name){
+        setDayClass(name)
     }
     const contexObj = {
         locationClass,
         dayClassName,
+        dayOutClassName,
         setLocationClassName,
-        setDayClassName
+        setDayInClassName,
+        setDayCheckOutClassName
     }
     return (<HotelErrorContext.Provider value={contexObj}>
         {children}
@@ -48,20 +54,31 @@ const HotelErrorProvider = ({children}) =>{
 
 const HotelSearchProvider = ({children})=>{
     const [searchHotel,setSearchHotel] = useState({});
-
+    
+    
     function setLocation(loc){
         const newSearch = {...searchHotel,'location':loc};
         setSearchHotel(newSearch)
     }
-    function setDay(day){
-        const newSearch = {...searchHotel,'day':day};
+
+    function setInDay(dayIn){
+        const shortDayName = new Date(dayIn).toLocaleDateString('en-US', { weekday: 'short' });
+        let newSearch = {...searchHotel,'dayIn':dayIn,'day':shortDayName};
         setSearchHotel(newSearch);
     }
 
+    function setOutDay(dayOut){
+        const newSearch = {...searchHotel,'dayOut':dayOut};
+        setSearchHotel(newSearch);
+    
+    }
+
+   
     const contextValue = {
         searchHotel,
         setLocation,
-        setDay
+        setInDay,
+        setOutDay
     }
 
     return (

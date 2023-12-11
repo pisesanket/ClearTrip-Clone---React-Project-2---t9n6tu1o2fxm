@@ -7,9 +7,9 @@
 #root{
     position: relative;
 }
-#login-modal-root{
-    /* position: fixed; */
-}
+/* #login-modal-root{
+    position: fixed;
+} */
 #login-modal-div{
     
     background-color: rgba(0, 0, 0, 0.4);

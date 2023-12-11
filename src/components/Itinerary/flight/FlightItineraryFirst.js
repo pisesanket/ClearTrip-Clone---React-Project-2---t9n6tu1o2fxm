@@ -23,7 +23,7 @@ const FlightItineraryFirst = () =>{
             }
         }).then(res=>res.json()).then(res=>{
             if(res.message=='success'){
-                console.log(res.data)
+        
                 setFlightData(res.data);
             }
         }).catch(err=>{

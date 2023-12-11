@@ -14,7 +14,7 @@ const LoginModal = (pros) =>{
         pros.setLoginModal(!pros.isLoginModal);
     }
     function handleSignUpClick(){
-        pros.setSignupModal(true);
+        pros.setSignupModal(true);  
         pros.setLoginModal(false);
     }
     async function callLoginApi(){

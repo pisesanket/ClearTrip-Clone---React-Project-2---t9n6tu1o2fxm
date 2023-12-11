@@ -117,6 +117,7 @@
     font-size: 17px;
     padding-left: 10px;
     padding-right: 10px;
+    border-radius: 7px;
 }
 .error-input{
     border-color: red;
@@ -150,8 +151,10 @@
     font-size: 17px;
     padding-left: 10px;
     padding-right: 10px;
+    border-radius: 7px;
 }
 #itinerary-gender{
     width: 150px;
     height: 30px;
+    border-radius: 7px;
 }

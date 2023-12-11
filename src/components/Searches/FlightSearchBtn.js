@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 
 const FlightSearchBtn = () =>{
-    const { searchFlight,setDest,setSource,setDay} = useFlightContext();
+    const { searchFlight,setDest,setSource,setInDay} = useFlightContext();
     const  { sourceClass, dayClassName,setSourceClassName,setDayClassName,destClass,setDestClassName} = useFlightErrorContext();
     function handleSearchClick(){
         if(!searchFlight.source){

@@ -24,6 +24,7 @@ const HotelDetail = () => {
             const data = await response.json();
 
             if (data.message === 'success') {
+                
                 setHotelDetail(data.data);
             }
         } catch (err) {
@@ -51,7 +52,7 @@ const HotelDetail = () => {
                 </div>
                 <HotelImageBig imageData={hotelDetail?.images} />
             </div>
-                <HotelRooms hotelId={hotelDetail?._id} hotelRooms={hotelDetail?.rooms} />
+                <HotelRooms hotelId={hotelDetail?._id}  hotelRooms={hotelDetail?.rooms} />
             
         </div>
     );

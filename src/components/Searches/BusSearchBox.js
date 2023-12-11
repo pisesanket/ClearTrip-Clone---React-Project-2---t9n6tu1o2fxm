@@ -2,6 +2,7 @@ import React from "react";
 import BusInput from "./BusInput";
 import BusSearchDay from "./BusSearchDay";
 import BusSearchBtn from "./BusSearchBtn";
+import BusSearchDate from "./BusSearchDate";
 
 
 
@@ -14,7 +15,8 @@ const BusSearchBox = () =>{
                 
 
                 <div id="bus-search-bottom">
-                    <BusSearchDay />
+                    <BusSearchDate />
+                    {/* <BusSearchDay /> */}
                     <BusSearchBtn />
                 </div>
         

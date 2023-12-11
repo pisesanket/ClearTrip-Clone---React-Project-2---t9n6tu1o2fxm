@@ -42,7 +42,7 @@ const HotelCard = (props) =>{
                         </div>
                         <div id="hotel-price-breakout">
                             <div id="hotel-base-price">₹{props.hotelData.rooms[0].costDetails.baseCost} <span>+ ₹{props.hotelData.rooms[0].costDetails.taxesAndFees} tax/night</span></div>
-                            <div id="hotel-discount">{props.hotelData.rooms[0].costDetails.discount}% discount</div>
+                            {props.hotelData.rooms[0].costDetails.discount>0?<div id="hotel-discount">{props.hotelData.rooms[0].costDetails.discount>0}% discount</div>:null}
                         </div>
                     </Link>
                 </div>

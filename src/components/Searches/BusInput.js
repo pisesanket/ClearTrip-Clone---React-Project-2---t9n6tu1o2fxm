@@ -31,7 +31,7 @@ const BusInput = () =>{
       };
     
       const handleSelectStation = (stat) => {
-          setBusSource(`${stat.iata} ${stat.city}`);
+          setBusSource(`${stat.city}`);
           setSource(stat.city)
           setSourceClassName(null);
         setTimeout(()=>{
@@ -60,7 +60,7 @@ const BusInput = () =>{
       };
     
       const handleDSelectStation = (stat) => {
-        setBusDest(`${stat.iata} ${stat.city}`);
+        setBusDest(`${stat.city}`);
         setDest(stat.city);
         setDestClassName(null);
         setTimeout(()=>{
