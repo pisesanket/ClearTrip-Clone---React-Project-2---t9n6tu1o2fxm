@@ -11,7 +11,7 @@
 #hotel-result-page-filters{
     /* width: max-content; */
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     border-bottom: 1px solid rgb(230,230,230);
 }
 #hotel-filter-bar{
