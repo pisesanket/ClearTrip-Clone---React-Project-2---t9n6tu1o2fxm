@@ -7,6 +7,10 @@
 #left-nav-bar{
     width: 150px;
 }
+#hotel-result-page{
+    display: flex;
+    flex-direction: column;
+}
 
 #hotel-result-page-filters{
     /* width: max-content; */

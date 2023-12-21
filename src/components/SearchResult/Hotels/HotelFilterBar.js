@@ -20,7 +20,6 @@ const HotelFilterBar = () =>{
             <div id="hotel-filter-cheap-div">
                 <input type="checkbox" onChange={handleCheapClick} checked={cheapest} id="hotel-cheap-checkbox" name="hotelCheapCheckbox" />
                 <label htmlFor="hotel-cheap-checkbox" id="">₹Cheapest</label>
-
             </div>
             <div id="hotel-rating-portal-root"></div>
 

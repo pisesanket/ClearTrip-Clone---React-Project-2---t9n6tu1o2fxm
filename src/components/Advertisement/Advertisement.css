@@ -1,0 +1,25 @@
+.advertisement-slider-container {
+    width: 400px;
+    margin: 20px auto; /* Adjust the margin as needed */
+    
+  }
+  
+  .advertisement-slide {
+    width: 60px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .advertisement-slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+@media only screen and (max-width:1024px){
+    .advertisement-slider-container{
+        display: none;
+    }
+}
+
+  

@@ -2,6 +2,8 @@ import React from "react";
 import BusSearchBox from "./BusSearchBox";
 import './styles/BusSearch.css'
 import BusSearchProvider, { BusErrorProvider } from "../../context/BusSearchContext";
+import Carousel from "../Advertisement/Advertisement";
+import AdvertisementSlider from "../Advertisement/Advertisement";
 
 
 const BusSearch = () =>{
@@ -16,7 +18,9 @@ const BusSearch = () =>{
                         <BusSearchBox />
                     </div>
 
+
             </div>
+            <AdvertisementSlider />
 
         </BusErrorProvider>
         </BusSearchProvider>

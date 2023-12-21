@@ -2,6 +2,7 @@ import React from "react";
 import HotelSearchBox from "./HotelSearchBox";
 import './styles/HotelSearch.css'
 import HotelSearchProvider, { HotelErrorProvider } from "../../context/HotelSearchContext";
+import AdvertisementSlider from "../Advertisement/Advertisement";
 
 
 
@@ -18,7 +19,7 @@ const HotelSearch = () =>{
                     </div>
 
             </div>
-
+            <AdvertisementSlider />
         </HotelErrorProvider>
         </HotelSearchProvider>
     </>)

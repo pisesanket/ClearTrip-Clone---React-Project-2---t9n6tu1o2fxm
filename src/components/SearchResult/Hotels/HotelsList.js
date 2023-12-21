@@ -52,9 +52,9 @@ const HotelsList = ({data}) =>{
 
     return (<>
         <div id="hotels-list-div">
-            {filterData.map(entry=>{
+            {filterData.length>0?filterData.map(entry=>{
                 return <HotelCard hotelData={entry} name={entry.name} rating={entry.rating} key={entry._id} imageList={entry.images} />
-            })}
+            }):<div className="zero-result">No hotel found !</div>}
         </div>
     </>)
 }

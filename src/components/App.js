@@ -19,6 +19,8 @@ import { LoginModalContextProvider } from "../context/LoginModalContext";
 import BookingCalendar from "./BookingCalender";
 import { BookingContextProvider } from "../context/BookingDetailContext";
 import Trips from "./Trips/Trips";
+import UnderConstructionPage from "./UnderConstructionPage";
+import Footer from "./Footer/Footer";
 
 function App() {
   return <div className="App ">
@@ -44,9 +46,16 @@ function App() {
           <Route path="/payment" element={<Payment />}></Route>
           <Route path='/date' element={<BookingCalendar />}></Route>
           <Route path="/trips" element={<Trips />}></Route>
+          <Route path="/support" element={<UnderConstructionPage />}></Route>
+          <Route path="/offers" element={<UnderConstructionPage />}></Route>
+          <Route path="/collections" element={<UnderConstructionPage />}></Route>
+          <Route path="/faqs" element={<UnderConstructionPage />}></Route>
+          <Route path="/aboutus" element={<UnderConstructionPage />}></Route>
+          <Route path="/careers" element={<UnderConstructionPage />}></Route>
 
         </Routes>
         </div>
+        <Footer />  
       </Router>
     </BookingContextProvider>
     </LoginModalContextProvider>

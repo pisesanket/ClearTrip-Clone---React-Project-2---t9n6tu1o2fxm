@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import TripCard from "./TripCard";
 import './style/trips.css';
+import AdvertisementSlider from "../Advertisement/Advertisement";
 
 const Trips = () =>{
     const [tripData,setTripData] = useState([]);
@@ -38,6 +39,7 @@ const Trips = () =>{
             </div>
             
         </div>
+        <AdvertisementSlider />
     </>)
 }
 

@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+
 }
 
 .App-logo {
@@ -35,4 +36,36 @@
   to {
     transform: rotate(360deg);
   }
+}
+#under-const-page{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#under-const-page>div{
+  /* margin-top: -40px; */
+  margin-left: auto;
+  margin-right: auto;
+  width: 50vw;
+  background-image: url('/src/Images/uConst.jpg');
+  background-position:center;
+  background-repeat: no-repeat;
+  background-size:contain;
+  background-clip:border-box  ;
+  height: 70vh;
+}
+@media only screen and (max-width:1024px){
+  #under-const-page>div{
+    width: 100vw;
+  }
+  #under-const-page{  
+    flex-direction: column;
+  }
+}
+.zero-result{
+  font-size: 27px;
+  font-weight: 600 ;
+  /* text-align: center; */
+  margin-left: auto;
+  margin-right: auto;
 }

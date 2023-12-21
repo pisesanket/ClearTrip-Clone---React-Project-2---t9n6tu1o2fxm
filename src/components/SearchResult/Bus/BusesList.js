@@ -54,9 +54,11 @@ const BusesList = ({data}) =>{
 
     return (<>
         <div id="buses-list-div">
-            {filterData.map(entry=>{
+            
+            {filterData.length>0?filterData.map(entry=>{
                 return <BusCard key={entry._id} busData={entry}  />
-            })}
+            }):<div className="zero-result">No buses found !</div>}
+            
         </div>
     </>)
 }

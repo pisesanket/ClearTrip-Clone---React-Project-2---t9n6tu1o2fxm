@@ -2,6 +2,7 @@ import React from "react";
 import FlightSearchBox from "./FlightSearchBox";
 import FlightSearchProvider, { FlightErrorProvider, FlightSeatProvider } from "../../context/FlightSeatContext";
 import './styles/FlightSearch.css'
+import AdvertisementSlider from "../Advertisement/Advertisement";
 
 
 const FlightSearch = () =>{
@@ -18,6 +19,7 @@ const FlightSearch = () =>{
                 </div>
 
             </div>
+            <AdvertisementSlider />
         </FlightSeatProvider>
         </FlightErrorProvider>
         </FlightSearchProvider>

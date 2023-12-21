@@ -53,9 +53,9 @@ const FlightList = ({data}) =>{
 
     return (<>
         <div id="flight-list-div">
-            {filterData.map(entry=>{
+            {filterData.length>0?filterData.map(entry=>{
                 return <FlightCard key={entry._id} flightData={entry}  />
-            })}
+            }):<div className="zero-result">No flight found !</div>}
         </div>
     </>)
 }
