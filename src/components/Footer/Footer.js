@@ -24,10 +24,10 @@ const Footer =  () =>{
                     <div id="footer-copyright">© 2023 Cleartrip Pvt. Ltd.</div>
                     <div id="footer-social-media">
                     <div id="footer-connetion">Connect </div>   
-                        <div><Link to='/'><img src={images.facebook} alt="" /></Link></div>
-                        <div><Link to='/'><img src={images.instagram} alt="" /></Link></div>
-                        <div><Link to='/'><img src={images.twitter} alt="" /></Link></div>
-                        <div><Link to='/'><img src={images.linkedin} alt="" /></Link></div>
+                        <div><Link to='/'><img width={'24px'} src={images.facebook} alt="" /></Link></div>
+                        <div><Link to='/'><img width={'24px'} src={images.instagram} alt="" /></Link></div>
+                        <div><Link to='/'><img width={'24px'} src={images.twitter} alt="" /></Link></div>
+                        <div><Link to='/'><img width={'24px'} src={images.linkedin} alt="" /></Link></div>
                     </div>
                 </div>
             </div>
