@@ -57,7 +57,7 @@ const FlightItineraryThird = () =>{
     }
     return (<>
         <div id="flight-itinerary-third" className="itinerary-div">
-            <div id="flight-itinerary-title" className="itinerary-title" ><span id="flight-third-number" className="itinerary-number">3</span><span>Add contact details</span></div>
+            <div id="flight-itinerary-title" className="itinerary-title" ><span id="flight-third-number" className="itinerary-number">3</span><span>Add Traveller details</span></div>
             {flightItContext.third&&
              <div id="flight-itinerary-third-form" >
              <div>Name</div>

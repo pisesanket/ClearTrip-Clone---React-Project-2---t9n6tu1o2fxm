@@ -146,6 +146,7 @@
 }
 #hotel-input-first>input:active #hotel-input-first{
     border-color: #3366cc !important;
+    
 }
 
 #hotel-search-bottom{

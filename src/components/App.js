@@ -21,6 +21,7 @@ import { BookingContextProvider } from "../context/BookingDetailContext";
 import Trips from "./Trips/Trips";
 import UnderConstructionPage from "./UnderConstructionPage";
 import Footer from "./Footer/Footer";
+import { FlightSeatProvider } from "../context/FlightSeatContext";
 
 function App() {
   return <div className="App ">
@@ -32,6 +33,7 @@ function App() {
         <MobileTopNavbar />
         <div id="main-page" >
         <LeftNavBar />
+        <FlightSeatProvider>
         <Routes>
           <Route path='/' element={<FlightSearch />}></Route>
           <Route path='/bus' element={<BusSearch />}></Route>
@@ -52,8 +54,8 @@ function App() {
           <Route path="/faqs" element={<UnderConstructionPage />}></Route>
           <Route path="/aboutus" element={<UnderConstructionPage />}></Route>
           <Route path="/careers" element={<UnderConstructionPage />}></Route>
-
         </Routes>
+          </FlightSeatProvider>
         </div>
         <Footer />  
       </Router>

@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useFlightItContext } from "../../../context/FlightItineraryContext";
+import { useSeatContext } from "../../../context/FlightSeatContext";
 
 
 const FlightItineraryFirst = () =>{
     const param = useParams();
     const [flightData,setFlightData] = useState({});
     const {flightItContext,setFlightIt,unSetFlightIt} = useFlightItContext();
-    
+    const { seatCount, incrementSeatCount, decrementSeatCount } = useSeatContext();
+
     function handleNextClick(){
         setFlightIt('second')
     }
@@ -57,6 +59,9 @@ const FlightItineraryFirst = () =>{
                         <div id="flight-itinerary-source">
                             {flightData.source}
                         </div>
+                    </div>
+                    <div>
+                        {seatCount>1?'Seats: ':'Seat: '}{seatCount}
                     </div>
                     <div id="flight-itinerary-right">
                         <div id="flight-itinerary-time">

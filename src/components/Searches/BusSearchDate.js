@@ -22,10 +22,10 @@ const BusSearchDate = () => {
             setSelectedDate(date);
             setInDay(date.toISOString());
             setStartDate(date.toISOString());
-            // setEndDate(date.toISOString());
+            
             setDayClassName(null);
         }
-        // setDayClassName(null)
+        
   };
   
   return (

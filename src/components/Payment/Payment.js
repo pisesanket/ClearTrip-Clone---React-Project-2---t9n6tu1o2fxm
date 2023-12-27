@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import './style/Payment.css'
 import { Link, useNavigate } from "react-router-dom";
 import { useBookingContext } from "../../context/BookingDetailContext";
+import CreditCardForm from "./CreditCardForm";
+import { useSeatContext } from "../../context/FlightSeatContext";
 
 const Payment =() =>{
     const [isUpi,setUpi] = useState(true);
@@ -12,9 +14,56 @@ const Payment =() =>{
     const [error,setError] = useState({});
     const [bookingModal,setBookingModal] = useState(false);
     const [bookingMsg,setBookingMsg] = useState('');
-    
+    const [cardNumber, setCardNumber] = useState('');
+    const [expiry, setExpiry] = useState('');
+    const [cvc, setCvc] = useState('');
+    const [name, setName] = useState('');
+    const { seatCount, incrementSeatCount, decrementSeatCount } = useSeatContext();
+
+    const [errors, setErrors] = useState({
+      number: '',
+      name: '',
+      expiry: '',
+      cvc: '',
+    });
     const {bookingValues,setType,setId,setStartDate,setEndDate,setPrice} = useBookingContext();
     const navigate = useNavigate();
+  
+    const handleInputChange = (e) => {
+      const { name, value } = e.target;
+  
+     
+  
+      switch (name) {
+        case 'number':
+          setCardNumber(value);
+          break;
+        case 'expiry':
+          setExpiry(value);
+          break;
+        case 'cvc':
+          setCvc(value);
+          break;
+        case 'name':
+          setName(value);
+          break;
+        default:
+          break;
+      }
+  
+      
+      if (value.trim() === '') {
+        setErrors((prevErrors) => ({
+          ...prevErrors,
+          [name]: 'Field is required',
+        }));
+      } else {
+        setErrors((prevErrors) => ({
+          ...prevErrors,
+          [name]: '', 
+        }));
+      }
+    };
     function handleCardChange(e){
         setCardValue(e.target.value);
     }
@@ -36,9 +85,33 @@ const Payment =() =>{
         if(isUpi&&!upiValue){
             setError({type:'upi'})
             
-        }else if(isCard&&!cardValue){
-            setError({type:'card'});
-        }else if((isUpi&&upiValue)||(isCard&&cardValue)){
+        }else if(isCard&&(!cardNumber||!name||!cvc||!expiry)){
+            if (!cardNumber) {
+                setErrors((prevErrors) => ({ ...prevErrors, cardNumber: 'Card Number is required' }));
+              } else {
+                setErrors((prevErrors) => ({ ...prevErrors, cardNumber: '' }));
+              }
+          
+              if (!name) {
+                setErrors((prevErrors) => ({ ...prevErrors, name: 'Name is required' }));
+              } else {
+                setErrors((prevErrors) => ({ ...prevErrors, name: '' }));
+              }
+          
+              if (!cvc) {
+                setErrors((prevErrors) => ({ ...prevErrors, cvc: 'CVC is required' }));
+              } else {
+                setErrors((prevErrors) => ({ ...prevErrors, cvc: '' }));
+              }
+          
+              if (!expiry) {
+                setErrors((prevErrors) => ({ ...prevErrors, expiry: 'Expiry is required' }));
+              } else {
+                setErrors((prevErrors) => ({ ...prevErrors, expiry: '' }));
+              }
+            
+            
+        }else if((isUpi&&upiValue)||(isCard&&cardNumber&&name&&cvc&&expiry)){
             callBookingApi();
             setError({});
         }
@@ -91,14 +164,15 @@ const Payment =() =>{
                 }{
                     isCard&&
                     <div id="card-box" className="payment-detail-box">
-                        <label htmlFor="upi-id">Enter Card number</label>
-                        <input type="text" className={error.type=='card'?'error-input':''} value={cardValue} id="upi-id" placeholder="Enter Card number" onChange={handleCardChange} />
+                        {/* <label htmlFor="upi-id">Enter Card number</label>
+                        <input type="text" className={error.type=='card'?'error-input':''} value={cardValue} id="upi-id" placeholder="Enter Card number" onChange={handleCardChange} /> */}
+                        <CreditCardForm errors={errors} handleInputChange={handleInputChange} cardNumber={cardNumber} expiry={expiry} cvc={cvc} name={name} />
                     </div>
                 }
                 
             </div>
             <div id="pay-now-box">
-                <div id="pay-now-price">₹{bookingValues?.price}</div>
+                <div id="pay-now-price">₹{bookingValues?.price*seatCount}</div>
                 {/* {(isUpi&&upiValue)||(isCard&&cardValue)?<Link to={`/`} >
                     <div className="payment-btn">Pay now</div>
                 </Link>: */}

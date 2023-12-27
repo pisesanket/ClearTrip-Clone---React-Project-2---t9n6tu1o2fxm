@@ -63,7 +63,7 @@ const BusItineraryThird = () =>{
     }
     return (<>
         <div id="bus-itinerary-third" className="itinerary-div">
-            <div id="bus-itinerary-title" className="itinerary-title" ><span id="bus-third-number" className="itinerary-number">3</span><span>Add contact details</span></div>
+            <div id="bus-itinerary-title" className="itinerary-title" ><span id="bus-third-number" className="itinerary-number">3</span><span>Add Traveller details</span></div>
             {busItContext.third&&
              <div id="bus-itinerary-third-form" >
              <div>Name</div>

@@ -16,9 +16,9 @@ const BookingCalendar = () => {
       <DatePicker
         selected={selectedDate}
         onChange={handleDateChange}
-        minDate={new Date()} // Optional: Set a minimum date (e.g., today)
+        minDate={new Date()} 
         placeholderText="Select a date"
-        dateFormat="eee, MMM , yyyy" // Format for displaying inside the input box
+        dateFormat="eee, MMM , yyyy" 
         
       />
       
